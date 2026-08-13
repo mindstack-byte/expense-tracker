@@ -36,7 +36,7 @@ body {
   padding: 2rem 1.25rem 4rem;
 }
 
-.header {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,14 +45,77 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.header h1 {
+.brand {
   font-size: 1.6rem;
-  margin: 0;
+  font-weight: 700;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.25rem;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-username {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.page-title {
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+}
+
+.nav-links a {
+  padding: 0.4rem 0.9rem;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-links a.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.link {
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 .stats {
   display: flex;
   gap: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .stat {
@@ -212,6 +275,16 @@ tbody tr:hover {
   white-space: nowrap;
 }
 
+.hash-cell {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .icon-btn {
   border: none;
   background: transparent;
@@ -276,6 +349,72 @@ tbody tr:hover {
   text-align: center;
   color: var(--muted);
   padding: 2rem 0;
+}
+
+.auth-card {
+  max-width: 360px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+}
+
+.auth-card h1 {
+  font-size: 1.3rem;
+  margin: 0 0 1.25rem;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.auth-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.auth-card input {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.auth-card input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: -1px;
+}
+
+.auth-card .btn-primary {
+  margin-top: 0.3rem;
+}
+
+.auth-error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.auth-switch {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
 }
 
 .card-title {
